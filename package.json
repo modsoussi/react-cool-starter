@@ -116,11 +116,6 @@
       "command": "cat ./coverage/lcov.info | coveralls"
     }
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,jsx}": "eslint --fix",
     "*.css": "stylelint",
@@ -246,6 +241,14 @@
             "local"
           ]
         }
+      ],
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "tailwind"
+          ]
+        }
       ]
     },
     "ignoreFiles": [
@@ -332,7 +335,8 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "serialize-javascript": "^1.8.0",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "tailwindcss": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

@@ -8,14 +8,15 @@ import { hot } from 'react-hot-loader';
 import config from '../config';
 // Import your global styles here
 import 'normalize.css/normalize.css'; // eslint-disable-line import/first
+// eslint-disable-next-line no-unused-vars
 import styles from './styles.scss';
 
 type Props = { route: Object };
 
 const App = ({ route }: Props) => (
-  <div className={styles.App}>
+  <div className="App">
     <Helmet {...config.app} />
-    <div className={styles.header}>
+    <div className="header">
       <img src={require('./assets/logo.svg')} alt="Logo" role="presentation" />
       <h1>{config.app.title}</h1>
     </div>
